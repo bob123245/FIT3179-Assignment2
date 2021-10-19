@@ -1,0 +1,150 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title":{"text":"Population Pyramid of Employment by Age and Gender",
+  "anchor":"middle"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/bob123245/3179-Week9-HomeWork/master/Data/Employment%20by%20occupation%2C%2020%E2%80%9374%20year%20old%2C%20by%20sex%2C%202019%E2%80%9320%20(a)(b)(c).csv"
+  },
+  
+  "spacing": 0,
+  "hconcat": [
+    {
+      "layer": [
+        {
+          "width": 250,
+          "transform": [
+            {"calculate": "2020","as":"Year"},
+            {"filter": {"field": "Gender", "equal": "Female"}}],
+          "title": "Female",
+          "mark": "bar",
+          "encoding": {
+            "y": {"field": "Employment", "axis": null, "sort": "descending"},
+            "x": {
+              "aggregate": "sum",
+              "field": "number",
+              "sort": "descending" 
+            },
+            "color": {
+              "field": "Gender",
+              "type": "nominal",
+              "scale": {"range": [ "#fc00b5","#0398fc"]},
+              "legend": null
+            },
+         "tooltip": [
+              {"field": "Gender", "type": "nominal"},
+              {"field": "number", "title":"Percentage","type": "ordinal"},
+               {"field": "Year", "type": "ordinal"}
+       ]
+          }
+        },
+      
+        {
+          "transform": [{"filter": {"field": "Gender", "equal": "Female"}}],
+          "mark": {"type": "text", "align": "right", "dx": -5},
+          "encoding": {
+            "y": {
+              "field": "Employment",
+              "title": null,
+              "axis": null,
+              "sort": "descending"
+            },
+            "x": {
+              "aggregate": "sum",
+              "field": "number",
+              "title": "Percentage",
+              "axis": {"format": "s"}
+            
+            },
+            "color": {"field": "Gender", "type": "nominal"},
+            "key": {"field": "number"},
+            "text": {
+              "aggregate": "sum",
+              "field": "number",
+              "type": "ordinal"
+            }
+          }
+        },
+        {
+          "width": 25,
+          "view": {"stroke": null},
+          "mark": {"type": "text", "align": "center", "dx": 230},
+          "encoding": {
+            "y": {
+              "field": "Employment",
+              "type": "ordinal",
+              "axis": null,
+              "sort": "descending"
+            },
+            "text": {"field": "Employment", "type": "ordinal"}
+          }
+        }
+      ]
+    },
+    {
+      "width": 10,
+      "view": {"stroke": null},
+      "mark": {"type": "text", "align": "center"}
+    },
+    {
+      "layer": [
+        {
+          "width": 250,
+          "transform": [
+             {"calculate": "2020","as":"Year"},{"filter": {"field": "Gender", "equal": "Male"}}],
+          "title": "Male",
+          "mark": "bar",
+          "encoding": {
+            "y": {
+              "field": "Employment",
+              "title": null,
+              "axis": null,
+              "sort": "descending"
+            },
+            "x": {"aggregate": "sum", "field": "number"},
+            "color": {"field": "Gender", "type": "nominal"},
+            "tooltip": [
+              {"field": "Gender", "type": "nominal"},
+              {
+                "aggregate": "sum",
+                "field": "number",
+                "type": "quantitative"
+              },
+              {"field": "Employment", "type": "ordinal"}
+            ]
+          }
+        },
+   
+        {
+          "transform": [{"filter": {"field": "Gender", "equal": "Male"}}],
+          "width": 0,
+          "view": {"stroke": "white"},
+          "mark": {"type": "text", "align": "left", "dx": 5},
+          "encoding": {
+            "y": {
+              "field": "Employment",
+              "title": null,
+              "axis": null,
+              "sort": "descending"
+            },
+            "x": {
+              "aggregate": "sum",
+              "field": "number",
+              "title": "Percentage",
+              "axis": {"format": "s"}
+            },
+            "color": {"field": "Gender"},
+            "key": {"field": "number"},
+            "text": {
+              "aggregate": "sum",
+              "field": "number",
+              "type": "ordinal",
+              "format": ","
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "config": {}
+}
