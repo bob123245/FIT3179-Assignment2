@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
    "data": {"url":"https://raw.githubusercontent.com/bob123245/FIT3179-Assignment2/master/Data/Austrlia_salary.csv"},
-   "title": "Industry salary vs City salary",
   "vconcat": [{
   "layer": [{
     
