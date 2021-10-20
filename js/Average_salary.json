@@ -9,7 +9,7 @@
       "name": "brush",
       "select": {"type": "interval", "encodings": ["x"]}
     }],
-    "width":500,
+    "width":499,
     "height":300,
     "mark": "bar",
     "encoding": {
