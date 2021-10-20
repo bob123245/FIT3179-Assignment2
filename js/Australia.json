@@ -31,7 +31,7 @@
         "url": "https://raw.githubusercontent.com/bob123245/FIT3179-Assignment2/master/Data/au.csv"
       },
       "transform": [
-   {"filter": "datum.city== 'Perth'|| datum.city== 'Melbourne'||datum.city== 'Sydney' || datum.city== 'Brisbane'||datum.city== 'Adelaide'||datum.city== 'Hobart'||datum.city== 'Darwin'||datum.city== 'Newcastle' ||datum.city== 'Wollongong'||datum.city== 'Gold Coast'||datum.city== 'Townsville'||datum.city== 'Townsville'||datum.city== 'Geelong'||datum.city== 'Ballarat'||datum.city== 'Mount Gambier'||datum.city== 'Gawler'||datum.city== 'Geraldton'||datum.city== 'Bunbury'"}],
+   {"filter": "datum.city== 'Perth'|| datum.city== 'Melbourne'||datum.city== 'Sydney' || datum.city== 'Brisbane'||datum.city== 'Adelaide'||datum.city== 'Hobart'||datum.city=='Canberra'||datum.city== 'Darwin'||datum.city== 'Newcastle' ||datum.city== 'Wollongong'||datum.city== 'Gold Coast'||datum.city== 'Townsville'||datum.city== 'Townsville'||datum.city== 'Geelong'||datum.city== 'Ballarat'||datum.city== 'Mount Gambier'||datum.city== 'Gawler'||datum.city== 'Geraldton'||datum.city== 'Bunbury'"}],
       "encoding": {
         "longitude": {
           "field": "lng",
@@ -81,7 +81,7 @@
         "url": "https://raw.githubusercontent.com/bob123245/FIT3179-Assignment2/master/Data/au.csv"
       },
       "transform": [
-   {"filter": "datum.city== 'Perth'|| datum.city== 'Melbourne'||datum.city== 'Sydney' || datum.city== 'Brisbane'||datum.city== 'Adelaide'||datum.city== 'Hobart'||datum.city== 'Darwin'"}],
+   {"filter": "datum.city== 'Perth'|| datum.city== 'Melbourne'||datum.city== 'Sydney' || datum.city== 'Brisbane'||datum.city== 'Adelaide'||datum.city== 'Hobart'||datum.city== 'Darwin'||datum.city=='Canberra'"}],
           "mark": {
             "type": "text",
             "dx": 10,
