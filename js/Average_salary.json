@@ -6,6 +6,8 @@
         "name": "brush",
         "select": {"type": "interval", "encodings": ["x"]}
       }],
+      "width":400,
+      "height":300,
       "mark": "bar",
       "encoding": {
         "x": {
