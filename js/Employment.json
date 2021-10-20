@@ -12,7 +12,7 @@
     {
       "layer": [
         {
-          "width": 300,
+          "width": 250,
           "height": 400,
           "transform": [
             {"calculate": "2020","as":"Year"},
@@ -90,7 +90,7 @@
     {
       "layer": [
         {
-           "width": 300,
+           "width": 250,
           "height": 400,
           "transform": [
              {"calculate": "2020","as":"Year"},{"filter": {"field": "Gender", "equal": "Male"}}],
