@@ -12,7 +12,9 @@
     {
       "layer": [
         {
-          "width": 250,
+          "width": 600,
+          "Height": 500,
+
           "transform": [
             {"calculate": "2020","as":"Year"},
             {"filter": {"field": "Gender", "equal": "Female"}}],
