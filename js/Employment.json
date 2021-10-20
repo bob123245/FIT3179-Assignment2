@@ -13,7 +13,6 @@
       "layer": [
         {
           "width": 600,
-          "Height": 500,
 
           "transform": [
             {"calculate": "2020","as":"Year"},
