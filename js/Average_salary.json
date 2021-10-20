@@ -69,6 +69,7 @@
     "encoding": {
       "y": {
         "aggregate": "mean",
+        "title":"Earnings",
         "field": "Earnings",
         "type": "quantitative"
       },
@@ -89,7 +90,7 @@
 
   "encoding": {
     "y": {"field": "Industry", "type": "nominal"},
-    "x": {"field": "earnings", "type": "quantitative"},
+    "x": {"field": "earnings", "type": "quantitative","title":"Earnings"},
  "color": {"value": "#a8326b"},
   
    "tooltip": [
