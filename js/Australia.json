@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 600,
-  "height": 300,
+  "height": 400,
   "title": "Top 3 most populous cities by state in Australia",
   
   "projection": {
@@ -61,7 +61,7 @@
             "size": {
           "field": "population",
           "title": "Population",
-
+          "legend":{"format":".1s"},
           "type": "quantitative",
           "scale": {
             "type": "threshold",
