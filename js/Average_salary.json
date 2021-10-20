@@ -1,79 +1,106 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {"url":"https://raw.githubusercontent.com/bob123245/FIT3179-Assignment2/master/Data/Austrlia_salary.csv"},
-    "layer": [{
-      "params": [{
-        "name": "brush",
-        "select": {"type": "interval", "encodings": ["x"]}
-      }],
-      "width":400,
-      "height":300,
-      "mark": "bar",
-      "encoding": {
-        "x": {
-          "field": "City",
-           "axis": null
-        },
-        "y": {
-          "aggregate": "mean",
-          "field": "Earnings",
-          "type": "quantitative"
-        },
-          "tooltip": [
-              {"field": "City", "type": "nominal"},
-              {"field": "Earnings", "type": "quantitative"}
-              ],
-        "color":{   
-      "field": "City",
-      "scale": {
-      "domain": [
-      "Melbourne",
-      "Sydney",
-      "Brisbane",
-      "Adelaide",
-      "Perth",
-      "Hobart",
-      "Darwin",
-      "ACT"
-      ],
-      "range": [
-      "#DC143C",
-      "#377eb8",
-      "#4daf4a",
-      "#984ea3",
-      "#ff7f00",
-      "#f5c842",
-      "#a65628",
-      "#20B2AA"
-      
-  ]
-  
-  }
-          
-        },
-        "opacity": {
-          "condition": {
-            "param": "brush", "value": 1
-          },
-          "value": 0.7
-        }
-      }
-    }, {
-      "transform": [{
-        "filter": {"param": "brush"}
-      }],
-      "mark": "rule",
-      "encoding": {
-        "y": {
-          "aggregate": "mean",
-          "field": "Earnings",
-          "type": "quantitative"
-        },
-        "color": {"value": "firebrick"},
-        "size": {"value": 3}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+   "data": {"url":"https://raw.githubusercontent.com/bob123245/FIT3179-Assignment2/master/Data/Austrlia_salary.csv"},
+ 
+  "hconcat": [{
+  "layer": [{
+    
+    "params": [{
+      "name": "brush",
+      "select": {"type": "interval", "encodings": ["x"]}
+    }],
+    "width":400,
+    "height":300,
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "City",
+         "axis": null
+      },
+      "y": {
+        "aggregate": "mean",
+        "field": "Earnings",
+        "type": "quantitative"
+      },
+        "tooltip": [
+            {"field": "City", "type": "nominal"},
+            {"field": "Earnings", "type": "quantitative"}
+            ],
+      "color":{   
+    "field": "City",
+    "scale": {
+    "domain": [
+    "Melbourne",
+    "Sydney",
+    "Brisbane",
+    "Adelaide",
+    "Perth",
+    "Hobart",
+    "Darwin",
+    "ACT"
+    ],
+    "range": [
+    "#DC143C",
+    "#377eb8",
+    "#4daf4a",
+    "#984ea3",
+    "#ff7f00",
+    "#f5c842",
+    "#a65628",
+    "#20B2AA"
+    
+]
+
+}
         
+      },
+      "opacity": {
+        "condition": {
+          "param": "brush", "value": 1
+        },
+        "value": 0.7
       }
+    }
+  }, {
+    "transform": [{
+      "filter": {"param": "brush"}
+    }],
+    "mark": "rule",
+    "encoding": {
+      "y": {
+        "aggregate": "mean",
+        "field": "Earnings",
+        "type": "quantitative"
+      },
+      "color": {"value": "firebrick"},
+      "size": {"value": 3}
       
-    }]
-  }
+    }
+    
+  }]
+  },
+  { "width":400,
+    "height":300,
+    "data": {
+    "url":"https://raw.githubusercontent.com/bob123245/FIT3179-Assignment2/master/Data/Industry%20salary.csv"
+    
+  },
+  "mark": "bar",
+
+  "encoding": {
+    "y": {"field": "Industry", "type": "nominal"},
+    "x": {"field": "earnings", "type": "quantitative"},
+ "color": {"value": "#a8326b"},
   
+   "tooltip": [
+            {"field": "Industry", "title":"Industry","type": "nominal"},
+            {"field": "earnings","title" :"Earnings","type": "quantitative"}
+
+  
+   ]
+  
+ 
+  }
+
+  }]
+}
