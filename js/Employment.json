@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title":{"text":"Population Pyramid of Employment by Age and Gender",
+  "title":{"text":"Population Pyramid of Employment by Industry and Gender",
   "anchor":"middle"
   },
   "data": {
