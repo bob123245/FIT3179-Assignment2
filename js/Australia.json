@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 400,
-  "height": 300,
-  "title": "Top 3 most populations cities by state in Australia",
+  "width": 900,
+  "height": 500,
+  "title": "Top 3 most populous cities by state in Australia",
   
   "projection": {
     "type": "equirectangular"
@@ -64,11 +64,14 @@
 
           "type": "quantitative",
           "scale": {
+            "type": "threshold",
             "domain": [
+              0,
               30000,
-              200000,
-              1000000
-              
+              100000,
+              1000000,
+              3000000,
+              5000000
             ]
           }
         }
