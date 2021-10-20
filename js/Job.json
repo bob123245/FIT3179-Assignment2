@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
 
-  "width": 400,
-  "height": 300,
+  "width": 800,
+  "height": 600,
    "data": {
 "url": "https://raw.githubusercontent.com/bob123245/FIT3179-Assignment2/master/Data/seek_australia_sample.csv"
 },
@@ -64,6 +64,7 @@ null,
 
     "color": {
     "field": "city",
+    "title":"City",
     "scale": {
     "domain": [
     "Melbourne",
@@ -88,9 +89,9 @@ null,
 }
 },
  "tooltip": [
-{"field": "category", "type": "nominal"},
-{"field": "city", "type": "nominal"},
-{"field": "category", "aggregate":"count"}
+{"field": "category", "type": "nominal","title":"Category"},
+{"field": "city", "type": "nominal","title":"City"},
+{"field": "category", "aggregate":"count","title":"Number of Jobs"}
 
     ]
 
