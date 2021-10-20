@@ -6,6 +6,10 @@ h1 {
     font-weight: 900;
 }
 
+p {
+    font-size: 20;
+}
+
 body {
     background-color: #f2e9e4;
 }
