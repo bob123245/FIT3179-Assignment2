@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
   "title":" 2018 recruitment information in Austrlia main cities from Seek webiste",
-  "width": 900,
+  "width": 901,
   "height": 600,
    "data": {
 "url": "https://raw.githubusercontent.com/bob123245/FIT3179-Assignment2/master/Data/seek_australia_sample.csv"
