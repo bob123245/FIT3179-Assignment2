@@ -12,8 +12,8 @@
     {
       "layer": [
         {
-          "width": 250,
-
+          "width": 300,
+          "height": 400,
           "transform": [
             {"calculate": "2020","as":"Year"},
             {"filter": {"field": "Gender", "equal": "Female"}}],
@@ -34,7 +34,7 @@
             },
          "tooltip": [
               {"field": "Gender", "type": "nominal"},
-              {"field": "number", "title":"Percentage","type": "ordinal"},
+              {"field": "number", "title":"% of Employment","type": "ordinal"},
                {"field": "Year", "type": "ordinal"}
        ]
           }
@@ -53,7 +53,7 @@
             "x": {
               "aggregate": "sum",
               "field": "number",
-              "title": "Percentage",
+              "title": "% of Employment",
               "axis": {"format": "s"}
             
             },
@@ -69,7 +69,7 @@
         {
           "width": 25,
           "view": {"stroke": null},
-          "mark": {"type": "text", "align": "center", "dx": 230},
+          "mark": {"type": "text", "align": "center", "dx": 260},
           "encoding": {
             "y": {
               "field": "Employment",
@@ -90,7 +90,8 @@
     {
       "layer": [
         {
-          "width": 250,
+           "width": 300,
+          "height": 400,
           "transform": [
              {"calculate": "2020","as":"Year"},{"filter": {"field": "Gender", "equal": "Male"}}],
           "title": "Male",
@@ -131,7 +132,7 @@
             "x": {
               "aggregate": "sum",
               "field": "number",
-              "title": "Percentage",
+              "title": "% of Employment",
               "axis": {"format": "s"}
             },
             "color": {"field": "Gender"},
